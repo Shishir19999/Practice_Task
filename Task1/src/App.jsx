@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+const searchFilterComponent = () => {
+  const fruit = [
+    'Apple',
+    'Banana',
+    'Orange',
+    'Mango',
+    'Guava',
+    'Pear'
+  ];
+
+  const [searchData, setSearchData] = useState('');
+
+  const inputData = (e) => {
+    setSearchData(e.target.value);
+  };
+
+  const filteredData = fruit.filter((fruits) =>
+    fruits.toLowerCase().includes(searchData.toLowerCase())
+  );
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchData}
+        onChange={inputData}
+      />
 
-export default App
+      <ol>
+        {filteredData.map((fruit,index) => (
+          <li key={index}>{fruit}</li>
+        ))}
+      </ol>
+    </div>
+  );
+};
+
+export default searchFilterComponent;
