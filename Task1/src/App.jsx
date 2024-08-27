@@ -1,41 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react'
+import SearchFilterComponent from './searchFilterComponent.jsx'
 
-const searchFilterComponent = () => {
-  const fruit = [
-    'Apple',
-    'Banana',
-    'Orange',
-    'Mango',
-    'Guava',
-    'Pear'
-  ];
-
-  const [searchData, setSearchData] = useState('');
-
-  const inputData = (e) => {
-    setSearchData(e.target.value);
-  };
-
-  const filteredData = fruit.filter((fruits) =>
-    fruits.toLowerCase().includes(searchData.toLowerCase())
-  );
-
+function App() {
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Search..."
-        value={searchData}
-        onChange={inputData}
-      />
-
-      <ol>
-        {filteredData.map((fruit,index) => (
-          <li key={index}>{fruit}</li>
-        ))}
-      </ol>
+      <div>
+      <h1>Fruit Search</h1>
+      <SearchFilterComponent />
     </div>
-  );
-};
+    </div>
+  )
+}
 
-export default searchFilterComponent;
+export default App
