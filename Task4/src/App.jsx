@@ -15,7 +15,7 @@ function App() {
                 <Dashboard />
             </ProtectedRoute>
             }/>
-          <Route path="*" element={<LoginPage />} /> {/* Redirect any unknown routes to login */}
+          <Route path="*" element={<LoginPage />} /> 
         </Routes>
       </div>
     </Router>
