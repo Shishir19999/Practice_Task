@@ -1,8 +1,13 @@
-# React + Vite
+# Task 2 - User List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React (Vite) component that fetches users from JSONPlaceholder (`/users`) and renders their names in an ordered list.
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev
+npm run build
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tooling (updated 2026-10-06)
+
+React 19.3, Vite 8, @vitejs/plugin-react 6, ESLint 9 (flat config). Requires Node ^20.19 or >=22.12.
