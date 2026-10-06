@@ -1,5 +1,4 @@
-import React from 'react'
-import SearchFilterComponent from './searchFilterComponent.jsx'
+import SearchFilterComponent from './SearchFilterComponent.jsx'
 
 function App() {
   return (

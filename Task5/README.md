@@ -1,8 +1,13 @@
-# React + Vite
+# Task 5 - Count Smaller Elements to the Right
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React (Vite) app: enter comma-separated numbers (e.g. `5, 2, 6, 1`) and for each element see how many smaller elements are to its right. Empty or non-numeric input shows an error message.
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev
+npm run build
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tooling (updated 2026-10-06)
+
+React 19.3, Vite 8, @vitejs/plugin-react 6, ESLint 9 (flat config). Requires Node ^20.19 or >=22.12.
